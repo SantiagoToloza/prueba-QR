@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 *
 {
   margin: 0;
@@ -6,47 +7,64 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-header
-{
+@font-face {
+  font-family: 'pink_blue';
+  src: url(/fonts/Pink_Blue.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
+
+
+.showcase .header .navbar {
   position: absolute;
+  z-index: 1000;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  right: 0;
+  background-color: transparent !important;
+  padding-right: 10rem;
+
 }
-header .logo
+.showcase .header .navbar li a{
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-family: pink_blue;
+  color: #ffba08;
+}
+
+.showcase .header .navbar a { 
+  font-size: 800;
+  color: #ffba08;
+  font-family: pink_blue;
+}
+
+.showcase .header .navbar-brand{
+  font-size: 3rem;
+}
+
+
+.showcase header .logo
 {
   color: #ffba08;
   text-transform: uppercase;
   cursor: pointer;
   font-size: 4rem;
+  font-family: pink_blue;
+  padding-top: 2rem;
 }
-.toggle
-{
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background: url(https://i.ibb.co/HrfVRcx/menu.png);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: center;
-  cursor: pointer;
+
+.showcase header .logoico img{
+  width: 800px;
+  height: 400px;
+  object-fit: cover;
+  padding-top: 0;
+  top: 0;
 }
-.toggle.active
-{
-  background: url(https://i.ibb.co/rt3HybH/close.png);
-  background-repeat: no-repeat;
-  background-size: 25px;
-  background-position: center;
-  cursor: pointer;
-}
+
+
 .showcase
 {
-  position: absolute;
+  position: relative;
   right: 0;
   width: 100%;
   min-height: 100vh;
@@ -57,10 +75,6 @@ header .logo
   background: #111;
   transition: 0.5s;
   z-index: 2;
-}
-.showcase.active
-{
-  right: 300px;
 }
 
 .showcase img
@@ -73,46 +87,62 @@ header .logo
   object-fit: cover;
   opacity: 0.8;
 }
-.overlay
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #03a9f4;
-  mix-blend-mode: overlay;
-}
+
 .text
 {
   position: relative;
   z-index: 10;
+  text-align: center;
+  width: 100%;
+  height: 600px;
+}
+
+.text .logoprincipal{
+  z-index: -1;
+}
+.text .lema {
+  padding-top: 7rem;
+}
+.text .lema2{
+  float:right;
+  font-size: 4rem;
+}
+
+.text .lema1{
+  font-size: 4rem;
 }
 
 .text h2
 {
   font-size: 5em;
   font-weight: 800;
-  color: #fff;
+  color: #db3a34;
   line-height: 1em;
   text-transform: uppercase;
+  font-family: pink_blue;
+  line-height: 0.7;
+  margin-bottom: 4rem;
 }
 .text h3
 {
   font-size: 4em;
-  font-weight: 700;
-  color: #fff;
+  font-weight: 800;
+  color: #ffba08;
   line-height: 1em;
   text-transform: uppercase;
+  font-family: pink_blue;
+  margin-bottom: 2rem;
+  
 }
 .text p
 {
-  font-size: 2em;
+  font-size: 3em;
   color: #fff;
-  margin: 20px 0;
   font-weight: 400;
   max-width: 700px;
   text-transform: uppercase;
+  font-family: 'pink_blue';
+
 }
 .text a
 {
@@ -128,6 +158,7 @@ header .logo
   letter-spacing: 2px;
   transition: 0.2s;
   align-items: center;
+  font-family: 'pink_blue';
 }
 .text a:hover
 {
@@ -142,7 +173,7 @@ header .logo
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  width: 100%;
+  width: 82%;
 }
 .social a{
     color: #ffff;
@@ -151,45 +182,67 @@ header .logo
 }
 
 
-.menu
-{
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu ul
-{
-  position: relative;
-}
-.menu ul li
-{
-  list-style: none;
-  padding-bottom: 5rem;
 
+.sobrenosotros{
+  text-align: center;
+  font-size: 2rem;
+  margin:auto;
+  padding: 40px 100px;
+  background-color: #111;
+  height: 100vh;
+  line-height: 2;
 }
-.menu ul li a
-{
-  text-decoration: none;
-  font-size: 3rem;
+
+.sobrenosotros h2{
+  font-family: pink_blue;
   color: #ffba08;
+  font-size: 3rem;
   font-weight: 800;
 }
-.menu ul li a:hover
-{
-  color: #d00000; 
+
+.sobrenosotros p{
+  font-family: pink_blue;
+  color: #ffff;
+  padding-bottom: 3rem;
+
 }
 
+.nuestrosprofes{
+  text-align: center;
+  font-size: 2rem;
+  margin:auto;
+  padding: 40px 100px;
+  background-color: #111;
+  height: 100vh;
+  line-height: 2;
+}
+
+.nuestrosprofes h2{
+  font-family: pink_blue;
+  text-align: center;
+  font-weight: 800;
+  font-size: 3rem;
+  color: #ffba08;
+}
+.navbar img{
+  width: 90px;
+  height: 90px;
+}
+
+.nuestrosprofes p{
+  font-family: pink_blue;
+  color: #fff;
+}
 @media (max-width: 991px)
 {
+  .showcase .navbar-light{
+    background-color:#ffba08 !important;
+}
   .showcase,
   .showcase header
   {
     padding: 40px;
+    
   }
   .text h2
   {
@@ -198,9 +251,16 @@ header .logo
   .text h3
   {
     font-size: 2em;
+    font-family: pink_blue;
+  }
+  .showcase .text h3 img {
+    width: 10px !important;
+    height: 10px;
   }
   .logo h2{
       font-size: 1rem;
+      font-family: pink_blue;
+      
   }
   .social{
       width: 300px;
@@ -211,15 +271,13 @@ header .logo
       text-align: center;
   }
 
+  .social a i .fab .facebook-fab{
+    color: #3b5998;
+  }
+
   .social a:last-child{
       padding-right: 0;
   }
-  .menu ul li {
-      padding-bottom: 50px;
-  }
-  .menu ul li a{
-      font-size: 2rem;
-      padding-bottom: 0;
-  }
+
 
 }
